@@ -18,3 +18,11 @@ Make sure you can trust the source of the package!
 cd [directory of file]
 sudo apt install ./[filename]
 ```
+or
+```
+sudo apt install -f [filename]
+```
+## Add directory to PATH
+```
+export PATH="[directory]:$PATH"
+```
