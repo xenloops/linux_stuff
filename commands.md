@@ -14,7 +14,7 @@ sudo apt install ./[filename]
 ```
 or
 ```
-sudo apt install -f [filename]
+sudo apt install -f ./[filename]
 ```
 ## Add directory to PATH
 ```
