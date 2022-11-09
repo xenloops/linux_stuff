@@ -9,29 +9,33 @@ sudo apt update; sudo apt upgrade -y
 ## Install .deb packages not in the repositories
 Make sure you can trust the source of the package!
 ```
-cd [directory of file]
-sudo apt install ./[filename]
+cd <directory of file>
+sudo apt install ./<filename>
 ```
 or
 ```
-sudo apt install -f [filename]
+sudo apt install -f <filename>
 ```
 ## Add directory to PATH
 ```
-export PATH="[directory]:$PATH"
+export PATH="<directory>:$PATH"
 ```
 ## Users and groups
 Enable sudo for a user
 ```
 su -
-[enter root password]
-usermod -a -G sudo [username]
+<enter root password>
+usermod -a -G sudo <username>
 ```
-Add group
+Create user
 ```
-sudo groupadd [group]
+sudo useradd -s /bin/bash -m -c "<Name>" -G<group> <username>
+```
+Create group
+```
+sudo groupadd <group>
 ```
 Add user to group
 ```
-sudo usermod -a -G [group] [user]
+sudo usermod -a -G <group> <user>
 ```
