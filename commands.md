@@ -48,6 +48,8 @@ Your own: ```passwd```
 
 Others': ```sudo passwd <user>```
 
+Force password change at next login: ```sudo passwd --expire <user>```
+
 ### Delete
 
 User: ```sudo userdel <username>```
