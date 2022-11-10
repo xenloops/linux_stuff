@@ -21,21 +21,36 @@ sudo apt install -f <filename>
 export PATH="<directory>:$PATH"
 ```
 ## Users and groups
-Enable sudo for a user
+
+### Enable sudo for a user
 ```
 su -
 <enter root password>
 usermod -a -G sudo <username>
 ```
-Create user
-```
-sudo useradd -s /bin/bash -m -c "<Name>" -G<group> <username>
-```
-Create group
-```
-sudo groupadd <group>
-```
-Add user to group
-```
-sudo usermod -a -G <group> <user>
-```
+### Create 
+
+User: ```sudo useradd -s /bin/bash -m -c "<Name>" -G<group> <username>```
+
+Group: ```sudo groupadd <group>```
+
+Add user to group: ```sudo usermod -a -G <group> <user>```
+
+### List 
+
+Users: ```getent passwd```
+
+Groups for a user: ```groups <user>```
+
+### Change password
+
+Your own: ```passwd```
+
+Others': ```sudo passwd <user>```
+
+### Delete
+
+User: ```sudo userdel <username>```
+
+Group: ```sudo groupdel <group>```
+
