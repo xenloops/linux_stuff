@@ -17,9 +17,27 @@ or
 sudo apt install -f <filename>
 ```
 ## Add directory to PATH
+
+### Temporarily; for current session
 ```
-export PATH="<directory>:$PATH"
+export PATH="/directory/to/add/:$PATH"
 ```
+Be sure to include the $ for $PATH, otherwise you'll lose other important path info.
+
+### Permanently; or at least until you change it again
+
+Once you've tested it for the session, you can make it permanent:
+Edit ~/.bashrc in your favorite torturous text editor. At the _bottom_ of the file, add:
+
+```
+export PATH="/path/to/add/:$PATH"
+```
+
+To load the change immediately, run:
+```
+source ~/.bashrc
+```
+
 ## Users and groups
 
 ### Enable sudo for a user
