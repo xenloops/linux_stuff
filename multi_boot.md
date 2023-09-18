@@ -37,7 +37,7 @@ Please note, these instructions assume use of the KDE desktop in Debian Linux. I
     11. Leave the chroot mode" `exit`
 11. Reboot, removing the USB stick when appropriate.
 
-This should bring you into the Grub menu, from which you should be able to select Linux or (if you must) Windows.
+This should bring you to the Grub menu, from which you should be able to select Linux or (if you must) Windows.
 
 ## If Windows is already installed
 (Coming soon)
