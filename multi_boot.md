@@ -22,7 +22,9 @@ Please note, these instructions assume use of the KDE desktop in Debian Linux. I
 6. Install Windows. Skip entering a product key at this time.
 7. Finish installing, making setting selections that leave your computer insecure and wide open to Microsoft, advertisers, and PII data resellers. Wait for it to finish setting up your computer, cleaning up, and saying "Hi". Spend this time asking yourself why a commercially produced OS developed by thousands of highly trained and well paid engineers takes three times longer than an open-source OS written by a scrappy rag-tag bunch of volunteers to set up.
 8. When it's finally done, reboot from the Linux live USB.
-9. 
+9. Open a terminal: App menu > System > Konsole.
+10. Enter these commands in turn:
+    A. `sudo fdisk -l`
 
 ## If Windows is already installed
 (Coming soon)
