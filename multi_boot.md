@@ -24,7 +24,20 @@ Please note, these instructions assume use of the KDE desktop in Debian Linux. I
 8. When it's finally done, reboot from the Linux live USB.
 9. Open a terminal: App menu > System > Konsole.
 10. Enter these commands in turn:
-    A. `sudo fdisk -l`
+    1. List the partition data: `sudo fdisk -l`; find the Device for the Linux filesystem type that holds the Linux you normally boot into. (I'll use `/dev/sda1` for this example -- be sure to change this to suit your system.)
+    2. [Coming soon: Special consideration for LVM systems]
+    3. Mount the partition: `sudo mount /dev/sda1 /mnt`
+    4. Mount any `/boot`, `/var`, or `/usr` partitions that are separate from the main one to `/mnt/boot`, `/mnt/var`, or `/mnt/usr`, respectively.
+    5. Bind other needed mounts: `for i in /sys /proc /run /dev; do sudo mount --rbind "$i" "/mnt$i"; done`
+    6. [Coming soon: Special consideration for EFI systems]
+    7. Chroot into the system partition: `sudo chroot /mnt`
+    8. Reinstall Grub: `grub-install /dev/sda`
+    9. Update grub: `update-grub`
+    10. [More EFI stuff coming soon.]
+    11. Leave the chroot mode" `exit`
+11. Reboot, removing the USB stick when appropriate.
+
+This should bring you into the Grub menu, from which you should be able to select Linux or (if you must) Windows.
 
 ## If Windows is already installed
 (Coming soon)
