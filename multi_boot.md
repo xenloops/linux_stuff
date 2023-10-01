@@ -4,6 +4,18 @@ or "How to get your proprietary, monolithic PoS OS to share"
 Please note, these instructions assume use of the KDE desktop in Debian Linux. If you're attempting this, you should have little problem adapting to other desktops and distributions.
 
 ## Put Linux on a bootable USB stick
+
+### If you're using Linux
+
+1. Download a "live CD/DVD/USB" version of the distro you want. (I prefer [Debian](https://cdimage.debian.org/debian-cd/current-live/amd64/bt-hybrid/), but others work well.) Once it's downloaded, be sure to check its authenticity with its SHA hash or PGP signing key (legit distros show you how).
+2. Open a Terminal and find out where the USB is mounted with the command ```sudo fdisk -l```. It should be something like ```/dev/sda```, but check the size and disk model to be sure. 
+3. Use _one_ of the following commands to copy the downloaded .iso to the USB stick (this will take a few minutes):
+   * ```sudo cp <live iso file> <USB location>```
+   * ```sudo dd if=<live iso file> of=<USB location> bs=16M status=progress oflag=sync```
+5. Eject the USB stick.
+
+### If you're using Windows
+
 (Coming soon)
 
 ## Put Windows on a bootable USB stick
