@@ -1,6 +1,19 @@
 # Common useful Linux commands 
 Debian variant
 
+## Write an installation ISO to a bootable USB stick
+
+### Linux instructions
+
+1. Download an ISO from [Debian downloads](https://www.debian.org/CD/live/).
+2. In a terminal, ```cd``` to the download directory.
+3. Insert a USB stick that is blank or can be completely wiped.
+4. Type ```fdisk -l``` from a root prompt (or by using ```sudo```).
+5. Note the ```/dev/sdx``` device name of the drive. _Make sure_ this is the correct drive!
+6. Type ```dd if=debian-live....iso of=/dev/sdx bs=4M status=progress``` (also using root/sudo). Change the ```if``` parameter to the downloaded ISO file and the ```of``` to the device name.
+7. Wait for the transfer to complete.
+8. Type ```sync```, and _then_ pull the USB stick out.
+
 ## Update the system
 Always do this after installing Linux, and once or twice a week
 ```
