@@ -34,5 +34,5 @@ Debian slogs in getting newer versions of Python into its main repo -- that's wh
     pyenv local <ver>  # Set for the current directory
     ```
 
-5. 
+
 
