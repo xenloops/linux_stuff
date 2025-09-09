@@ -25,9 +25,13 @@ Debian slogs in getting newer versions of Python into its main repo -- that's wh
 
 3. Reload the shell to apply the environment
 
-    ```exec "$SHELL"```
+    `exec "$SHELL"`
 
-4. Install Python Versions
+4. Install Python version
+
+    `pyenv install <python version>`
+
+5. Load Python version
 
     ```
     pyenv global <ver> # Set as default global version
