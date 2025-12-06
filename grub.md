@@ -1,4 +1,14 @@
+## Install GRUB
 
+```
+> sudo -s
+> grub
+> find /boot/grub/stage1
+> root (hd x,y)
+> setup (hd x)
+> quit
+```
+Then reboot.
 
 
 ## GRUB doesn't boot to Linux in an EFI system
