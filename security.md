@@ -95,3 +95,22 @@ Finally, the report gives an overall score and what it actually did:
   - Test and debug information      : /var/log/lynis.log
   - Report data                     : /var/log/lynis-report.dat
 ```
+
+
+## Vulnerability scanning
+
+### OpenVAS / Greenbone
+
+OpenVAS scans a host or subnet for known vulnerabilities (CVEs). 
+
+[Documentation](https://greenbone.github.io/docs/latest/index.html)
+
+#### Installation
+
+
+
+#### Running
+
+When it first runs, OpenVAS takes a considerable amount of time downloading vuln data. You'll see "Please wait while the feed is syncing. Scans are not available during this time." at the top of the screen. Be patient, and if at all possible, don't close the container if you want to run scans in the next hour.
+
+
